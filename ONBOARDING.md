@@ -2,7 +2,7 @@
 
 This document provides an overview of the technologies used in FarmData2, describes the roles that they play and provides resources for learning the essentials of each.
 
-Interacting with FarmData2 requires a basic familiarity with git and GitHub. FarmData2 development uses a fairly standard web technology stack including HTML, CSS, Bootstrap, JavaScript, and Vue.js. The front-end accesses FarmData2 data through the [FarmOS API](https://farmos.org/development/api/) using the [Axios](https://github.com/axios/axios) library. End-to-end testing is done using the [Cypress framework](https://www.cypress.io/). The automation, configuration and back-end development of FarmData2 use a number of other technologies including Drupal, drush, FarmOS, Docker, docker-compose and bash scripting.
+Interacting with FarmData2 requires a basic familiarity with git and GitHub. FarmData2 development uses a fairly standard web technology stack including HTML, CSS, Bootstrap, JavaScript, and Vue.js. The front-end accesses FarmData2 data through the [farmOS API](https://farmOS.org/development/api/) using the [Axios](https://github.com/axios/axios) library. End-to-end testing is done using the [Cypress framework](https://www.cypress.io/). The automation, configuration and back-end development of FarmData2 use a number of other technologies including Drupal, drush, farmOS, Docker, docker-compose and bash scripting.
 
 This document is intended to be used in two ways. When you are new to FarmData2, it is recommended that you work through this document from the top down. However, it is not essential that you fully master every tool and technology on the first pass. Rather once you feel basically comfortable with a tool or technology (or if you already know it) skip to the next one.  Then later, while working on FarmData2 you can return to this document and jump directly to the relevant section(s) to find a reference or to learn a little bit more as needed.
 
@@ -53,7 +53,7 @@ If you use these activities, please keep in mind that they were created for use 
 - 04 - Vue Data Binding Technology Spike [ [docx](media/Activities/04-VueDataBindingSpike.docx) | [pdf](media/Activities/04-VueDataBindingSpike.pdf) ]
 - 05 - Vue Events and JavaScript Functions Technology Spike [ [docx](media/Activities/05-VueJSEventsSpike.docx) | [pdf](media/Activities/05-VueJSEventsSpike.pdf) ]
 - 06 - Web APIs Technology Spike [ [docx](media/Activities/06-WebAPIsSpike.docx) | [pdf](media/Activities/06-WebAPIsSpike.pdf) ]
-- 07 - FarmOS API Technology Spike [ [docx](media/Activities/07-FarmOSAPISpike.docx) | [pdf](media/Activities/07-FarmOSAPISpike.pdf) ]
+- 07 - farmOS API Technology Spike [ [docx](media/Activities/07-farmOSAPISpike.docx) | [pdf](media/Activities/07-farmOSAPISpike.pdf) ]
 - 08 - Cascading Style Sheets and Bootstrap (in development)
 - 09 - Element Selectors and Cypress Testing (in development)
 
@@ -110,7 +110,7 @@ The majority of development for FarmData2 is front-end (i.e. browser-based).  Th
 
 #### JavaScript ####
 
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) is a programming language that can be used to add interactivity to HTML pages.  JavaScript can add or remove HTML elements, change CSS styles and respond to events (e.g. button clicks, text entry). JavaScript is also used to produce dynamic content by exchanging information with web services through Application Programming Interfaces (APIs). For example, when a user of FarmData2 saves or retrieves information about plantings or harvests it is done by JavaScript code using an API (see [FarmOS API](#farmos-api)).
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) is a programming language that can be used to add interactivity to HTML pages.  JavaScript can add or remove HTML elements, change CSS styles and respond to events (e.g. button clicks, text entry). JavaScript is also used to produce dynamic content by exchanging information with web services through Application Programming Interfaces (APIs). For example, when a user of FarmData2 saves or retrieves information about plantings or harvests it is done by JavaScript code using an API (see [farmOS API](#farmOS-api)).
 
   - Resources:
     - [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics): A great place to start if you have not worked with JavaScript before or want a refresher.
@@ -131,15 +131,15 @@ The majority of development for FarmData2 is front-end (i.e. browser-based).  Th
     - [Components Basics](https://github.com/DickinsonCollege/FarmData2/edit/main/ONBOARDING.md): A textual introduction to Vue Components.
     - [FarmData2 Vue Component Details](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md): Information on specifically how FarmData2 uses and tests Vue Components.
 
-#### FarmOS API ####
+#### farmOS API ####
 
-The FarmData2 front end exchanges data with the server using the [FarmOS API](https://farmos.org/development/api/). JavaScript code using the [Axios](https://github.com/axios/axios) library requests data from FarmOS (e.g. a list of fields) or sends new data to FarmOS (e.g. a new planting). When data is received from FarmOS, the Vue.js object is updated, which in turn updates what is displayed in the browser. Conversely, when the user enters data in the browser, that data updates the Vue.js object and that information is used to make requests to the server.
+The FarmData2 front end exchanges data with the server using the [farmOS API](https://farmOS.org/development/api/). JavaScript code using the [Axios](https://github.com/axios/axios) library requests data from farmOS (e.g. a list of fields) or sends new data to farmOS (e.g. a new planting). When data is received from farmOS, the Vue.js object is updated, which in turn updates what is displayed in the browser. Conversely, when the user enters data in the browser, that data updates the Vue.js object and that information is used to make requests to the server.
 
   - Resources:
     - [What is an API and how does it work?](https://www.youtube.com/watch?v=Yzx7ihtCGBs): A video introduction to APIs with a few examples.This is a good place to start if you are new to APIs.
     - [Using Axios to Consume APIs](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html): A short example of a `GET` request using Axios and Vue.js.
     - [Axios](https://github.com/axios/axios): Full documentation for the axios library. This show how to do both `GET` and `POST` requests.
-    - [FarmOS API](https://farmos.org/development/api/): Documentation for the FarmOS API.
+    - [farmOS API](https://farmOS.org/development/api/): Documentation for the farmOS API.
     - [Hoppscotch](https://hoppscotch.io/): A tool for experimenting with API calls. This can be useful in figuring out how to request what you want from the FarmData2 API and how its responses are formatted.
 
 #### Bootstrap ####
@@ -213,7 +213,7 @@ Bash scripts are provided in the [docker](https://github.com/DickinsonCollege/Fa
 
 #### farmOS ####
 
-FarmData2 is built as a set of customizations to [farmOS](https://farmos.org/). The majority of FarmData2's features are added as custom modules displayed in tabs within the farmOS interface. See the [README.md](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md) in the `fd2_example` module for a description of how FarmData2 modules are added to farmOS.
+FarmData2 is built as a set of customizations to [farmOS](https://farmOS.org/). The majority of FarmData2's features are added as custom modules displayed in tabs within the farmOS interface. See the [README.md](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md) in the `fd2_example` module for a description of how FarmData2 modules are added to farmOS.
 
 #### Drupal ####
 
