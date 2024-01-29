@@ -4,7 +4,7 @@ FarmData2 is an application that supports the operation and certification requir
 
 ### Description ###
 
-FarmData2 is a web application for recording and reporting on crop and livestock production within the context of small organic farming operations.  Crop production records include seeding, transplanting, harvest, cover crop, compost, fertilization, irrigation, pest scouting, and spray activities.  Livestock production records track animals from birth to slaughter or sale and include pasture moves, periodic and veterinary care and logging of egg production.  Records of packing, distribution and customer invoicing are also maintained.  All records and reporting features are designed to closely align with organic certification requirements and to support the certification and recertification process.
+FarmData2 is a web application for recording and reporting on crop and livestock production within the context of small organic farming operations.  Crop production records include seeding, transplanting, harvest, cover crop, compost, fertilization, irrigation, pest scouting, and spray activities.  Livestock production records track animals from birth to slaughter or sale and include pasture moves, periodic and veterinary care, and logging of egg production.  Records of packing, distribution and customer invoicing are also maintained.  All records and reporting features are designed to closely align with organic certification requirements and to support the certification and recertification process.
 
 ### Installing FarmData2 ###
 
