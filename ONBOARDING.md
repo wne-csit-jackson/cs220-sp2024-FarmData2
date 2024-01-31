@@ -2,7 +2,7 @@
 
 This document provides an overview of the technologies used in FarmData2, describes the roles that they play and provides resources for learning the essentials of each.
 
-Interacting with FarmData2 requires a basic familiarity with git and GitHub. FarmData2 development uses a fairly standard web technology stack including HTML, CSS, Bootstrap, JavaScript, and Vue.js. The front-end accesses FarmData2 data through the [FarmOS API](https://farmos.org/development/api/) using the [Axios](https://github.com/axios/axios) library. End-to-end testing is done using the [Cypress framework](https://www.cypress.io/). The automation, configuration and back-end development of FarmData2 use a number of other technologies including Drupal, drush, FarmOS, Docker, docker-compose and bash scripting.
+Interacting with FarmData2 requires a basic familiarity with git and GitHub. FarmData2 development uses a fairly standard web technology stack including HTML, CSS, Bootstrap, JavaScript, and Vue.js. The front-end accesses FarmData2 data through the [FarmOS API](https://FarmOS.org/development/api/) using the [Axios](https://github.com/axios/axios) library. End-to-end testing is done using the [Cypress framework](https://www.cypress.io/). The automation, configuration and back-end development of FarmData2 use a number of other technologies including Drupal, drush, FarmOS, Docker, docker-compose and bash scripting.
 
 This document is intended to be used in two ways. When you are new to FarmData2, it is recommended that you work through this document from the top down. However, it is not essential that you fully master every tool and technology on the first pass. Rather once you feel basically comfortable with a tool or technology (or if you already know it) skip to the next one.  Then later, while working on FarmData2 you can return to this document and jump directly to the relevant section(s) to find a reference or to learn a little bit more as needed.
 
@@ -110,7 +110,7 @@ The majority of development for FarmData2 is front-end (i.e. browser-based).  Th
 
 #### JavaScript ####
 
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) is a programming language that can be used to add interactivity to HTML pages.  JavaScript can add or remove HTML elements, change CSS styles and respond to events (e.g. button clicks, text entry). JavaScript is also used to produce dynamic content by exchanging information with web services through Application Programming Interfaces (APIs). For example, when a user of FarmData2 saves or retrieves information about plantings or harvests it is done by JavaScript code using an API (see [FarmOS API](#farmos-api)).
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) is a programming language that can be used to add interactivity to HTML pages.  JavaScript can add or remove HTML elements, change CSS styles and respond to events (e.g. button clicks, text entry). JavaScript is also used to produce dynamic content by exchanging information with web services through Application Programming Interfaces (APIs). For example, when a user of FarmData2 saves or retrieves information about plantings or harvests it is done by JavaScript code using an API (see [FarmOS API](#FarmOS-api)).
 
   - Resources:
     - [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics): A great place to start if you have not worked with JavaScript before or want a refresher.
@@ -133,18 +133,18 @@ The majority of development for FarmData2 is front-end (i.e. browser-based).  Th
 
 #### FarmOS API ####
 
-The FarmData2 front end exchanges data with the server using the [FarmOS API](https://farmos.org/development/api/). JavaScript code using the [Axios](https://github.com/axios/axios) library requests data from FarmOS (e.g. a list of fields) or sends new data to FarmOS (e.g. a new planting). When data is received from FarmOS, the Vue.js object is updated, which in turn updates what is displayed in the browser. Conversely, when the user enters data in the browser, that data updates the Vue.js object and that information is used to make requests to the server.
+The FarmData2 front end exchanges data with the server using the [farmOS API](https://farmOS.org/development/api/). JavaScript code using the [Axios](https://github.com/axios/axios) library requests data from farmOS (e.g. a list of fields) or sends new data to farmOS (e.g. a new planting). When data is received from farmOS, the Vue.js object is updated, which in turn updates what is displayed in the browser. Conversely, when the user enters data in the browser, that data updates the Vue.js object and that information is used to make requests to the server.
 
   - Resources:
     - [What is an API and how does it work?](https://www.youtube.com/watch?v=Yzx7ihtCGBs): A video introduction to APIs with a few examples.This is a good place to start if you are new to APIs.
     - [Using Axios to Consume APIs](https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html): A short example of a `GET` request using Axios and Vue.js.
     - [Axios](https://github.com/axios/axios): Full documentation for the axios library. This show how to do both `GET` and `POST` requests.
-    - [FarmOS API](https://farmos.org/development/api/): Documentation for the FarmOS API.
+    - [FarmOS API](https://FarmOS.org/development/api/): Documentation for the FarmOS API.
     - [Hoppscotch](https://hoppscotch.io/): A tool for experimenting with API calls. This can be useful in figuring out how to request what you want from the FarmData2 API and how its responses are formatted.
 
 #### Bootstrap ####
 
-[Bootstrap](https://getbootstrap.com/) is a framework and CSS component library used by farmOS, and thus by FarmData2, to provide stylized HTML components. Polished production FarmData2 modules will use Bootstrap components instead of basic html elements so that FarmData2 integrates visually into the farmOS interface.
+[Bootstrap](https://getbootstrap.com/) is a framework and CSS component library used by FarmOS, and thus by FarmData2, to provide stylized HTML components. Polished production FarmData2 modules will use Bootstrap components instead of basic html elements so that FarmData2 integrates visually into the FarmOS interface.
 
   - Resources:
     - [Introduction to Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Comprehensive documentation for the Bootstrap framework.
@@ -191,8 +191,8 @@ Cypress component tests work by mounting a Vue Component into a browser and allo
 #### docker ####
 
 The developer install of FarmData2 relies on docker containers running:
-   - the core FarmData2 system including farmOS and Drupal.
-   - an instance of MariaDB for data storage by farmOS and Drupal.
+   - the core FarmData2 system including FarmOS and Drupal.
+   - an instance of MariaDB for data storage by FarmOS and Drupal.
    - an instance of PHPmyAdmin to allow developers to interact directly with the MariaDB instance as necessary.
    - an instance of the TheiaIDE.
    - an instance of the Cypress testing environment.
@@ -201,7 +201,7 @@ All of the docker related configuration and source files are found in the [docke
 
 #### docker-compose ####
 
-FarmData2 uses docker-compose to build custom docker images for farmOS and the TheiaIDE containers and to start and network all of the containers.
+FarmData2 uses docker-compose to build custom docker images for FarmOS and the TheiaIDE containers and to start and network all of the containers.
 
 See the `docker-compose.yml` file in the [docker](https://github.com/DickinsonCollege/FarmData2/tree/main/docker) directory.
 
@@ -211,14 +211,14 @@ Bash scripts are provided in the [docker](https://github.com/DickinsonCollege/Fa
 
 ### Back-End Technologies ###
 
-#### farmOS ####
+#### FarmOS ####
 
-FarmData2 is built as a set of customizations to [farmOS](https://farmos.org/). The majority of FarmData2's features are added as custom modules displayed in tabs within the farmOS interface. See the [README.md](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md) in the `fd2_example` module for a description of how FarmData2 modules are added to farmOS.
+FarmData2 is built as a set of customizations to [FarmOS](https://FarmOS.org/). The majority of FarmData2's features are added as custom modules displayed in tabs within the FarmOS interface. See the [README.md](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md) in the `fd2_example` module for a description of how FarmData2 modules are added to FarmOS.
 
 #### Drupal ####
 
-farmOS runs on top of Drupal. From the FarmData2 perspective this is largely transparent.  As it is discovered that more information is necessary it will be added here.
+FarmOS runs on top of Drupal. From the FarmData2 perspective this is largely transparent.  As it is discovered that more information is necessary it will be added here.
 
 #### drush ####
 
-For a few particular tasks related to initializtion and configuration FarmData2 makes use of [drush](https://www.drush.org/latest/) to interact with the Drupal instance on which farmOS is running. As it is discovered that more information is necessary it will be added here.
+For a few particular tasks related to initializtion and configuration FarmData2 makes use of [drush](https://www.drush.org/latest/) to interact with the Drupal instance on which FarmOS is running. As it is discovered that more information is necessary it will be added here.
