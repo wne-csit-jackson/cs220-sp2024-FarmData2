@@ -4,7 +4,7 @@ FarmData2 is an application that supports the operation and certification requir
 
 ### Description ###
 
-FarmData2 is a web application for recording and reporting on crop and livestock production within the context of small organic farming operations.  Crop production records include seeding, transplanting, harvest, cover crop, compost, fertilization, irrigation, pest scouting, and spray activities.  Livestock production records track animals from birth to slaughter or sale and include pasture moves, periodic and veterinary care and logging of egg production.  Records of packing, distribution and customer invoicing are also maintained.  All records and reporting features are designed to closely align with organic certification requirements and to support the certification and recertification process.
+FarmData2 is a web application for recording and reporting on crop and livestock production within the context of small organic farming operations.  Crop production records include seeding, transplanting, harvest, cover crop, compost, fertilization, irrigation, pest scouting, and spray activities.  Livestock production records track animals from birth to slaughter or sale and include pasture moves, periodic and veterinary care, and logging of egg production.  Records of packing, distribution and customer invoicing are also maintained.  All records and reporting features are designed to closely align with organic certification requirements and to support the certification and recertification process.
 
 ### Installing FarmData2 ###
 
@@ -26,14 +26,14 @@ FarmData2 is both a _second_ edition of it predecessor, FarmData, and the integr
 
 ### Acknowledgements ###
 
-FarmData2 is powered by the farmOS open source project.
+FarmData2 is powered by the [farmOS](https://not.the.right.link2) open source project.
 
 Support and assistance with FarmData2 development has been received from [The Non-Profit FOSS Institute](https://npfi.org/).
 
 The development of FarmData2 has received partial support from:
 * The [GNOME Community Engagement Challenge](https://a.different.link3):
   * [![Phase 1 Badge](media/GNOME-CEC-p1-small.png)](media/GNOME-CEC-p1.png)[![Phase 2 Badge](media/GNOME-CEC-p2-small.png)](media/GNOME-CEC-p2.png)    
-* The National Science Foundation (DUE-2013069) - Collaborative Research: Broadening Participation in Computing through Authentic, Collaborative Engagement with Computing for the Greater Good.
+* The National Science Foundation ([DUE-2013069](https://not.the.right.link4)) - Collaborative Research: Broadening Participation in Computing through Authentic, Collaborative Engagement with Computing for the Greater Good.
 * [Zulip](https://zulip.com) provides sponsored hosting for [FarmData2 community discussions](https://farmdata2.zulipchat.com/#narrow/stream/270883-general).
 
 ---
