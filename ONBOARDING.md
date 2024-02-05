@@ -2,7 +2,7 @@
 
 This document provides an overview of the technologies used in FarmData2, describes the roles that they play and provides resources for learning the essentials of each.
 
-Interacting with FarmData2 requires a basic familiarity with git and GitHub. FarmData2 development uses a fairly standard web technology stack including HTML, CSS, Bootstrap, JavaScript, and Vue.js. The front-end accesses FarmData2 data through the [FarmOS API](https://farmos.org/development/api/) using the [Axios](https://github.com/axios/axios) library. End-to-end testing is done using the [Cypress framework](https://www.cypress.io/). The automation, configuration and back-end development of FarmData2 use a number of other technologies including Drupal, drush, FarmOS, Docker, docker-compose and bash scripting.
+Interacting with FarmData2 requires a basic familiarity with git and GitHub. FarmData2 development uses a fairly standard web technology stack including HTML, CSS, Bootstrap, JavaScript, and Vue.js. The front-end accesses FarmData2 data through the [farmOS API](https://farmos.org/development/api/) using the [Axios](https://github.com/axios/axios) library. End-to-end testing is done using the [Cypress framework](https://www.cypress.io/). The automation, configuration and back-end development of FarmData2 use a number of other technologies including Drupal, drush, FarmOS, Docker, docker-compose and bash scripting.
 
 This document is intended to be used in two ways. When you are new to FarmData2, it is recommended that you work through this document from the top down. However, it is not essential that you fully master every tool and technology on the first pass. Rather once you feel basically comfortable with a tool or technology (or if you already know it) skip to the next one.  Then later, while working on FarmData2 you can return to this document and jump directly to the relevant section(s) to find a reference or to learn a little bit more as needed.
 
@@ -29,10 +29,10 @@ The following resources can be useful for learning what you'll need to know abou
 
   - Resources:
     - [Hello World](https://guides.github.com/activities/hello-world/): A first introduction to GitHub that will get you started if you haven't used it before.
-    - [GitFlow Intro](https://guides.github.com/introduction/flow/): An introduction to an effective way of using GitHub (i.e. a _workflow_).  The followign two guides walk through how to work with existing open source projects and essentially follow GitFlow:
+    - [GitFlow Intro](https://guides.github.com/introduction/flow/): An introduction to an effective way of using GitHub (i.e. a _workflow_).  The following two guides walk through how to work with existing open source projects and essentially follow GitFlow:
       - [Step-by-step guide to contributing on GitHub](https://www.dataschool.io/how-to-contribute-on-github/)
       - [7 Steps to Get Started with Git](https://www.fosslife.org/7-steps-get-started-git).
-    - [Git Immersion](https://gitimmersion.com/): A tutorial walks through a series of short hands-on exercises that provide practice with the key features of git.
+    - [Git Immersion](https://gitimmersion.com/): A tutorial that walks through a series of short hands-on exercises that provide practice with the key features of git.
     - [Pro Git Book](http://git-scm.com/book/en/v2) | [Learn Git Tutorial](https://www.tutorialspoint.com/git/index.htm): More detailed and comprehensive coverage of git's features and use.
 
 ## Quickest Start ##
@@ -45,7 +45,7 @@ FarmData2 has been used in a number of undergraduate computer science courses an
 
 The activities will guide you from an introduction to FOSS and FarmData2, through installation of FarmData2 and then through the use of each of the key technologies used in FarmData2. Each activity includes practice using the technologies within the context of FarmData2. Thus, you'll learn not only the technologies, but will get comfortable working within the FarmData2 developer environment as well.
 
-If you use these activities, please keep in mind that they were created for use as assignments in courses. Thus, you shouldn't feel obligated to answer every question and you should skip over any class specific parts that don't make sense outside of a course. When you have completed all of the activities you'll be well on your way to being a FarmData2 developer.  In addition, while these activites will be updated as FarmData2 evolves, they may not be fully in synch with the latest code in the repository.  If you run in to any issues, use the 
+If you use these activities, please keep in mind that they were created for use as assignments in courses. Thus, you shouldn't feel obligated to answer every question and you should skip over any class specific parts that don't make sense outside of a course. When you have completed all of the activities you'll be well on your way to being a FarmData2 developer.  In addition, while these activities will be updated as FarmData2 evolves, they may not be fully in synch with the latest code in the repository.  If you run in to any issues, use the 
 
 - 01 - Introduction to FOSS & The FarmData2 Community [ [docx](media/Activities/01-IntroToFarmData2.docx) | [pdf](media/Activities/01-IntroToFarmData2.pdf) ]
 - 02 - FarmData2 Developer Install [ [docx](media/Activities/02-DeveloperInstall.docx) | [pdf](media/Activities/02-DeveloperInstall.pdf) ]
@@ -79,7 +79,7 @@ When the IDE opens:
 The explorer on the left will show the contents and structure of the FarmData2 repository. If you are familiar with other IDEs then using Theia should be relatively straight forward.
 
   - Resources:
-    - [How to use Eclipse Theia as an IDE](https://eclipsesource.com/blogs/2019/10/04/how-to-use-eclipse-theia-as-an-ide/): An overview of Theia and its use ad an Integrated Development Environment.
+    - [How to use Eclipse Theia as an IDE](https://eclipsesource.com/blogs/2019/10/04/how-to-use-eclipse-theia-as-an-ide/): An overview of Theia and its use as an Integrated Development Environment.
 
 As FarmData2 matures, utilities (e.g. linters and formatters) will be added to the provided Theia IDE. If you choose to use a different editor, all such utilities will be documented in the [INSTALL.md](INSTALL.md) file so that you can install the appropriate plugins for your editor.
 
@@ -151,20 +151,21 @@ The FarmData2 front end exchanges data with the server using the [FarmOS API](ht
 
 #### Cypress ####
 
-The functionality of FarmData2 is tested using the [Cypress framework](https://www.cypress.io/). The tests in FarmData2 consist of end-to-end tests and component tests.  The end-to-end tests run against the developer instance of FarmData2 and check the functionality of the pages.  The component tests check the behavior of custom components that appear in FarmData2, in isolation from the runing instance. FarmData 2 provides support for running both types of Cypress tests in a Docker container that eliminates the need to install or configure Cypress. See the documentation in the [farmdata2_modules/fd2_tabs/README.md](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md) file for information about runing Cypress tests in FarmData2. 
+The functionality of FarmData2 is tested using the [Cypress framework](https://www.cypress.io/). The tests in FarmData2 consist of end-to-end tests and component tests.  The end-to-end tests run against the developer instance of FarmData2 and check the functionality of the pages.  The component tests check the behavior of custom components that appear in FarmData2, in isolation from the running instance. FarmData 2 provides support for running both types of Cypress tests in a Docker container that eliminates the need to install or configure Cypress. See the documentation in the [farmdata2_modules/fd2_tabs/README.md](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md) file for information about runing Cypress tests in FarmData2. 
 
 ##### End-to-End Tests #####
 
-The Cypress end-to-end test framework works by controlling the web browser. A test typically consists of a series of steps that are automated by the Cypress tests, called _spec_s. A typical spec consist of the steps:
+The Cypress end-to-end test framework works by controlling the web browser. A test typically consists of a series of steps that are automated by the Cypress tests, called *spec*s. A typical spec consist of the steps:
   1. Setup the test (e.g. login, prime the database)
   1. Visit a specific page
-  1. Query the page for an _html element_ of interest (e.g. button, ext field)
+  1. Query the page for an _html element_ of interest (e.g. button, text field)
   1. Interact with that element (e.g. click the button, enter some text)
   1. Make an assertion about the result (e.g. new information appears on the page)
 
   - Resources
     - [Introduction to Cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html): As the docs say... "the single most important guide for understanding how to test with Cypress. Read it. Understand it."
-    - [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file): A good overview of how a typical cypres test work, what the code looks like and how to use the cypress test runner.
+    - [Writing Your First Test](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file): A good overview of how a typical cypress test works
+    , what the code looks like and how to use the cypress test runner.
     - [Selecting Elements](https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements): Best practices for selecting elements that are manipulated and checked by your tests. Following these will make you tests less brittle.
     - [Selector Playground](https://docs.cypress.io/guides/core-concepts/test-runner.html#Selector-Playground): A tool within the cypress test runner that will help you find good selectors to use for the elements used in your tests.
     - [Interacting with Elements](https://docs.cypress.io/guides/core-concepts/interacting-with-elements): The main commands in cypress for interacting with elements in the page (e.g. click, select, etc.)
@@ -173,7 +174,7 @@ The Cypress end-to-end test framework works by controlling the web browser. A te
     - [FarmData2 Cypress Tests Details](https://github.com/DickinsonCollege/FarmData2/blob/main/farmdata2_modules/fd2_tabs/fd2_example/README.md): Information on specifically how FarmData2 uses Cypress tests.
 ##### Component Tests #####
 
-Cypress component tests work by mounting a Vue Component into a browser and allowing tests to interact with it in isolation from the application.  A typical comonent test will:
+Cypress component tests work by mounting a Vue Component into a browser and allowing tests to interact with it in isolation from the application.  A typical component test will:
   1. Configuring and mounting the component into the test framework.
   1. Query the component for an _html element_ of interest (e.g. button, ext field)
   1. Interact with that element (e.g. click the button, enter some text)
@@ -221,4 +222,4 @@ farmOS runs on top of Drupal. From the FarmData2 perspective this is largely tra
 
 #### drush ####
 
-For a few particular tasks related to initializtion and configuration FarmData2 makes use of [drush](https://www.drush.org/latest/) to interact with the Drupal instance on which farmOS is running. As it is discovered that more information is necessary it will be added here.
+For a few particular tasks related to initialization and configuration FarmData2 makes use of [drush](https://www.drush.org/latest/) to interact with the Drupal instance on which farmOS is running. As it is discovered that more information is necessary it will be added here.
